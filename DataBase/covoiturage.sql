@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 09 mai 2025 à 17:30
+-- Généré le : jeu. 15 mai 2025 à 23:49
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -46,7 +46,6 @@ INSERT INTO `location` (`idlocation`, `nbplace`, `prix`, `datedepare`, `villedep
 (6, 2, 50, '2025-05-01 11:25:00', 'nabeul', 'tunisia', 14418249, 12345679),
 (7, 0, 40, '2025-04-25 12:57:00', 'nabeul', 'tunisia', 14418244, 7123),
 (8, 3, 25, '2025-05-10 09:00:00', 'Tunis', 'Sousse', 14418303, 20010001),
-(9, 2, 30, '2025-05-11 14:30:00', 'Sfax', 'Tunis', 14418304, 20010002),
 (10, 3, 20, '2025-05-12 08:15:00', 'Gabes', 'Sousse', 14418305, 20010003);
 
 -- --------------------------------------------------------
@@ -96,7 +95,8 @@ CREATE TABLE `owner_history` (
 
 INSERT INTO `owner_history` (`idHistory`, `CinOwner`, `idLocation`, `totalEarnings`) VALUES
 (1, 14418303, 8, 200.00),
-(2, 14418304, 9, 150.00);
+(6, 14418249, 6, 50.00),
+(7, 14418244, 7, 40.00);
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,7 @@ CREATE TABLE `payment` (
 --
 
 INSERT INTO `payment` (`card`, `dateCard`, `cvv`, `nameOwner`, `money`) VALUES
-('1234567891234567', '04/13', '123', 'Adem Ben Amor', 2800.00);
+('1234567891234567', '04/13', '123', 'Adem Ben Amor', 2620.00);
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,10 @@ CREATE TABLE `trip_history` (
 
 INSERT INTO `trip_history` (`idHistory`, `CinClient`, `idLocation`, `totalPrice`, `dateOfTrip`) VALUES
 (1, 14418302, 8, 50.00, '2025-04-20 10:00:00'),
-(2, 14418303, 9, 40.00, '2025-04-21 13:30:00');
+(6, 14418249, 6, 50.00, '2025-05-01 11:25:00'),
+(7, 14418244, 7, 40.00, '2025-04-25 12:57:00'),
+(8, 14418266, 6, 50.00, '2025-05-01 11:25:00'),
+(9, 14418304, 6, 50.00, '2025-05-01 11:25:00');
 
 -- --------------------------------------------------------
 
@@ -169,12 +172,10 @@ INSERT INTO `user` (`nom`, `pr`, `cin`, `adresse`, `tel`, `role`, `placeRes`, `u
 ('ben amor', 'adem', 14418266, 'Maamoura , nahej chahid mouhamed zgued', 23039320, 'user', 12345679, 'dissojak0'),
 ('Doe', 'John', 14418299, 'Tunis Centre', 22994411, 'user', NULL, 'newuser'),
 ('Ali', 'Mohamed', 14418300, 'Tunis, Lafayette', 22233444, 'user', 20010003, 'client1'),
-('Salma', 'Trabelsi', 14418301, 'Sfax Centre', 987654321, 'client', NULL, 'client2'),
 ('Hatem', 'Zribi', 14418302, 'Sousse Corniche', 22445566, 'user', NULL, 'client3'),
 ('Yassine', 'Bouazizi', 14418303, 'Tunis, Menzah 6', 22556677, 'owner', NULL, 'owner1'),
 ('Mariem', 'Gharbi', 14418304, 'Ariana, Ennasr', 22667788, 'owner', NULL, 'owner2'),
-('Ibrahim', 'Kefi', 14418305, 'Monastir, Marina', 22778899, 'owner', NULL, 'owner3'),
-('Ali', 'Mohamed', 14418370, 'Tunis, Lafayette', 123456789, 'client', NULL, 'client1');
+('Ibrahim', 'Kefi', 14418305, 'Monastir, Marina', 22778899, 'owner', NULL, 'owner3');
 
 -- --------------------------------------------------------
 
@@ -270,13 +271,13 @@ ALTER TABLE `location`
 -- AUTO_INCREMENT pour la table `owner_history`
 --
 ALTER TABLE `owner_history`
-  MODIFY `idHistory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idHistory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `trip_history`
 --
 ALTER TABLE `trip_history`
-  MODIFY `idHistory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idHistory` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Contraintes pour les tables déchargées
