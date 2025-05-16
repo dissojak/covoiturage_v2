@@ -23,13 +23,21 @@ $userInfo = $LC->UsersInCar($mat);
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>User Information</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('../assets/bg-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
+
 <body class="bg-gray-100">
     <div class="container mx-auto py-10">
-        <h1 class="text-3xl font-bold mb-6" style="margin-left: 25px;">Users Going Information</h1>
+        <h1 class="text-3xl font-bold mb-6 text-white" style="margin-left: 25px;">Users Going Information</h1>
 
         <?php if (!empty($userInfo)): ?>
             <div class="bg-white rounded-lg shadow-lg p-6">
@@ -73,8 +81,9 @@ $userInfo = $LC->UsersInCar($mat);
         <?php endif; ?>
 
         <!-- Button to redirect to PlacesStillAvailable.php -->
-        <br/>
+        <br />
         <a href="PlacesStillAvailabale.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 float-right" style="margin-right: 25px;">Places Still Available</a>
     </div>
 </body>
+
 </html>

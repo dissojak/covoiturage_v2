@@ -1,6 +1,6 @@
 <?php
 require_once('../controllers/LocationController.php');
-require_once('../models/Location.php'); 
+require_once('../models/Location.php');
 require_once('../controllers/AccountController.php');
 require_once('../models/Account.php');
 
@@ -18,7 +18,7 @@ if ($AC->checkPlaceReservation($username)) {
     exit();
 } else {
     // Already made a reservation
-    ?>
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -27,10 +27,16 @@ if ($AC->checkPlaceReservation($username)) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Reservation Already Made</title>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            body {
+                background: url('../assets/bg-image.png') no-repeat center center fixed;
+                background-size: cover;
+            }
+        </style>
     </head>
 
-    <body>
-        <div class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <body class="min-h-screen flex items-center justify-center p-4 font-sans">
+        <div class="flex items-center justify-center">
             <div class="bg-white p-8 shadow-lg rounded-lg">
                 <h2 class="text-2xl font-bold mb-4">Reservation Already Made</h2>
                 <p class="mb-4">You have already made a reservation.</p>

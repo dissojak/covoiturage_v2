@@ -24,7 +24,7 @@ if ($AC->verifyLogin($username, $pw)) {
         if ($LC->checkLocationByCin($cin)) {
             header('Location: PlacesStillAvailabale.php');
         } else {
-            header('Location: AddLocation.php');
+            header('Location: CarNotInLocation.php');
         }
         exit();
     } else {
@@ -33,8 +33,25 @@ if ($AC->verifyLogin($username, $pw)) {
     }
 } else {
     $error = "Invalid username or password. Please try again.";
-    echo "<p style='color:red; text-align:center;'>$error</p>";
-    echo "<p style='text-align:center;'><a href='login.php'>Back to Login</a></p>";
+    echo '
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Login Error</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100 min-h-screen flex items-center justify-center font-sans p-4">
+      <div class="bg-white shadow-lg rounded-xl p-8 max-w-md w-full text-center">
+        <h2 class="text-2xl font-bold text-red-600 mb-4">Login Failed</h2>
+        <p class="text-red-700 mb-6">' . htmlspecialchars($error) . '</p>
+        <a href="login.php" class="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition">
+          Back to Login
+        </a>
+      </div>
+    </body>
+    </html>';
     exit();
 }
 ?>

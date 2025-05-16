@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>No Car Set</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('../assets/bg-image.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 min-h-screen flex items-center justify-center p-6 font-sans">
+<body class="min-h-screen flex flex-col items-center justify-center p-6 font-sans">
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full mb-8">
     
     <!-- Add Location Card -->
     <div class="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl shadow-xl p-8 border-4 border-blue-600">
@@ -41,6 +47,11 @@
     </div>
     
   </div>
+
+  <a href="../services/logout.php"
+     class="bg-red-500 hover:bg-red-600 text-white py-3 px-10 rounded-lg text-lg font-semibold shadow-md transition">
+    Disconnect
+  </a>
 
 </body>
 </html>

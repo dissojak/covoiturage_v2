@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: url('../assets/bg-image.png') no-repeat center center fixed;
+        background-size: cover;
+      }
+    </style>
   </head>
 
   <body class="bg-gray-100 min-h-screen flex items-center justify-center font-sans">
@@ -53,10 +59,15 @@
             <input type="password" id="confirm_password" name="confirm_password" required class="w-full border px-3 py-1 rounded" />
           </div>
         </div>
-
-        <div class="text-center mt-4">
-          <input type="submit" value="Sign Up" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 cursor-pointer" />
+        <div class="flex justify-between mt-6">
+          <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">
+            Sign Up
+          </button>
+          <a href="login.php" class="bg-gray-200 text-gray-700 px-6 py-2 rounded hover:bg-gray-300 transition text-center">
+            Retour à la connexion ⬅
+          </a>
         </div>
+
       </form>
     </div>
 

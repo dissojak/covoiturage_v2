@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Trip History</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background: url('../assets/bg-image.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
-<body>
+
+<body class="text-white">
     <div class="container">
         <h1>User Trip History</h1>
-        <table class="table">
+        <table class="table text-white">
             <thead>
                 <tr>
                     <th>Location ID</th>
@@ -37,7 +46,8 @@
                 ?>
             </tbody>
         </table>
-        <a href="userDashboard.php" class="btn btn-primary">Back to Dashboard</a>
+        <a href="ShowLocation.php" class="btn btn-primary">Back to Dashboard</a>
     </div>
 </body>
+
 </html>

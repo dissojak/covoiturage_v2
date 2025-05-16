@@ -21,13 +21,21 @@ $_SESSION['mat'] = $mat;
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nouvelle Location</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('../assets/bg-image.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
 </head>
-<body class="bg-[#f5f7fa] min-h-screen flex items-center justify-center p-4 font-sans">
+
+<body class="min-h-screen flex items-center justify-center p-4 font-sans">
   <div class="grid md:grid-cols-2 w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden transition-transform duration-300 transform hover:scale-105">
 
     <!-- Form Section -->
@@ -98,10 +106,11 @@ $_SESSION['mat'] = $mat;
     <!-- Image Section -->
     <div class="hidden md:block bg-blue-50 relative">
       <img src="https://plus.unsplash.com/premium_photo-1687575292568-02ec1e942c14?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-           alt="car travel" class="object-cover w-full h-full"/>
+        alt="car travel" class="object-cover w-full h-full" />
       <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white/10"></div>
     </div>
 
   </div>
 </body>
+
 </html>

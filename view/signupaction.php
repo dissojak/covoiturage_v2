@@ -32,7 +32,7 @@ if ($AC->cinExist($cin)) {
     $_SESSION['tel'] = $tel;
     $_SESSION['role'] = $role;
 
-    header('Location: AddVoiture.php');
+    header('Location: CarNotInLocation.php');
     exit();
 } else {
     // Save the user as authenticated
